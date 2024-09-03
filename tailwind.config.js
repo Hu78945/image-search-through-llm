@@ -18,6 +18,8 @@ module.exports = {
       colors: {
         'yellow': '#FFCE42',
         'light-gray': '#CCCCCC',
+        'dark-gray': '#1A1A1A',
+
         'white': '#FFFFFF',
         'medium-gray': '#808080',
       },
