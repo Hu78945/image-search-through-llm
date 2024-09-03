@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './components/Main';
+import Home from './components/Home';
 
  
 function AppRoutes() {  
@@ -8,7 +8,7 @@ function AppRoutes() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={< Main/>} />
+          <Route path="/" element={<Home />} />
           
         </Routes>
       </div>

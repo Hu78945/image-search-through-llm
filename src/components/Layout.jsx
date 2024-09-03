@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './shared/Header'
 
 const Layout = () => {
   return (
-    <div>Layout</div>
+    <div className='bg-black h-screen'>
+      <Header />
+    </div>
   )
 }
 
