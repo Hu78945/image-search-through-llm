@@ -16,10 +16,10 @@ const Prompt = ({data, inProgress = false, imageData}) => {
         })}
         {inProgress && <p className='text-15 text-medium-gray'>Looking for photos...</p>}
         <div className='flex'>
-          {imageData.map((item)=>
+          {imageData && imageData[0].map((item)=>
             <img src={item.imagePath} className='h-24 w-1/6'></img>
           )}
-          <div className='flex justify-center items-center bg-dark-gray w-1/6 text-white'>+24</div>
+          {imageData && <div className='flex justify-center items-center bg-dark-gray w-1/6 text-white'>{imageData[1]}</div>}
         </div>
         
         
