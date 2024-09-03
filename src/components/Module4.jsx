@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from './Layout'
-import SidePanel from './shared/SidePanel'
+import SidePanel from './shared/ImagesPanel'
 
 const Module4 = () => {
   const imageData1 = [

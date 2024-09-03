@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SidePanel = ({data}) => {
+const ImagesPanel = ({data}) => {
   return (
     <div className='bg-black border-2 border-red-900 w-1/2'>
         <div className='flex justify-between items-center border-b border-light-gray'>
@@ -85,4 +85,4 @@ const SidePanel = ({data}) => {
   )
 }
 
-export default SidePanel
+export default ImagesPanel

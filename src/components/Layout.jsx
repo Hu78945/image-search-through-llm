@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './shared/Header'
 import Prompt from './shared/Prompt'
-import SidePanel from './shared/SidePanel'
+import SidePanel from './shared/ImagesPanel'
 
 const Layout = ({data, inProgress, displaySidePanel = true}) => {
   return (
