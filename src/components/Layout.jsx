@@ -4,7 +4,7 @@ import Prompt from './shared/Prompt'
 
 const Layout = () => {
   return (
-    <div className='bg-black h-screen border-2 border-green-700 flex flex-col items-center'>
+    <div className='bg-black h-screen flex flex-col items-center'>
       <Header />
       <Prompt />
     </div>
