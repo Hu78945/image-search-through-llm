@@ -2,10 +2,12 @@ import React from 'react'
 import Layout from './Layout'
 
 const Module3 = () => {
+  const data=["How can Click help you today?", "Find me some pictures of people on the street", "Here are 28 pictures of people on the street", "wow"]
+
   return (
     <div className='flex'>
       <div className='w-1/2'>
-        <Layout />
+        {/* <Layout /> */}
       </div>
 
       <div className='bg-black border-2 border-red-900 w-1/2'>
