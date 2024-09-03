@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Module2 from './components/Module2';
 import Module3 from './components/Module3';
+import Module4 from './components/Module4';
 
  
 function AppRoutes() {  
@@ -12,6 +13,8 @@ function AppRoutes() {
         <Routes>
           <Route path="/module_2" element={<Module2 />} />
           <Route path="/module_3" element={<Module3 />} />
+          <Route path="/module_4" element={<Module4 />} />
+
 
           
         </Routes>

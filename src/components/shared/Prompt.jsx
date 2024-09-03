@@ -2,28 +2,27 @@ import React from 'react'
 import Answer from './Answer'
 import Question from './Question'
 
-const Prompt = ({data, inProgress = false, imageData}) => {
+const Prompt = ({data, inProgress = false}) => {
   
   return (
     <div className='p-2 flex flex-col justify-between w-1/2 h-full'>
       <div className='flex flex-col gap-6'>
         {data.map((item, index) => {
+          console.log('item:', item);
+          
           if (index % 2 === 0) {
-            return <Question key={index} data={item} />;
+            return (
+              <React.Fragment key={index}>
+                <Question data={item} />
+                
+                {item.imageData[1] && <div>{item.imageData[1]}</div>}
+              </React.Fragment>
+            )
           } else {
             return <Answer key={index} data={item} />;
           }
         })}
         {inProgress && <p className='text-15 text-medium-gray'>Looking for photos...</p>}
-        <div className='flex'>
-          {imageData && imageData[0].map((item)=>
-            <img src={item.imagePath} className='h-24 w-1/6'></img>
-          )}
-          {imageData && <div className='flex justify-center items-center bg-dark-gray w-1/6 text-white'>{imageData[1]}</div>}
-        </div>
-        
-        
-        
       </div>
 
       <div className='w-full relative'>
