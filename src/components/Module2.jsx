@@ -1,6 +1,5 @@
 import React from "react";
-import Layout from "./Layout";
-import Layout1 from "./Layout1";
+import Layout from "./shared/Layout";
 
 const Module2 = () => {
   const data = [
@@ -14,9 +13,10 @@ const Module2 = () => {
       imageData: [], 
     },
   ];
+  
   return (
     <div>
-      <Layout1 data={data} inProgress={true} />
+      <Layout data={data} inProgress={true} />
     </div>
   );
 };

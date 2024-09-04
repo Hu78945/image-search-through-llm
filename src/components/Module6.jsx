@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from './Layout'
 import Header from './shared/Header'
 import logo from '../click_logo_textless.svg'
 
