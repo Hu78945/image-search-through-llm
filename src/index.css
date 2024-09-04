@@ -1,8 +1,9 @@
 body {
-    background-color: #EBFFF6;
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Optional: Set a default font */
-  }
+  background-color: #EBFFF6;
+  margin: 0; /* Remove default margin */
+  font-family: Aeonik; /* Optional: Set a default font */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,4 +22,18 @@ body {
   .text_dark_green {
     @apply text-dark-green text-base sm:text-lg font-normal mb-2 sm:mb-0
   }
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./fonts/AeonikTRIAL-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./fonts/AeonikTRIAL-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
