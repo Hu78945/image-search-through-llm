@@ -1,18 +1,18 @@
-import React from 'react'
-import Header from './shared/Header'
-import Prompt from './shared/Prompt'
-import SidePanel from './shared/ImagesPanel'
+import React from "react";
+import Header from "./shared/Header";
+import Prompt from "./shared/Prompt";
+import ImagesPanel from "./shared/ImagesPanel";
 
-const Layout = ({data, inProgress, displaySidePanel = true}) => {
+const Layout = ({ data, inProgress, displayImagesPanel = true }) => {
   return (
-    <div className='flex'>
-      <div className='bg-black h-screen flex flex-col items-center w-full'>
+    <div className="flex">
+      <div className="bg-black h-screen flex flex-col items-center w-full">
         <Header />
         <Prompt data={data} inProgress={inProgress} />
       </div>
-      {displaySidePanel && <SidePanel data={data} />}
+      {displayImagesPanel && <ImagesPanel data={data} />}
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

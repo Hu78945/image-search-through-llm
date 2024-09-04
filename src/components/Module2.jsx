@@ -1,16 +1,19 @@
-import React from 'react'
-import Layout from './Layout'
+import React from "react";
+import Layout from "./Layout";
 
 const Module2 = () => {
   const data = [
-    {description: "How can Click help you today?", imageData: []},
-    {description: "Find me some pictures of people on the street", imageData: []},
-  ]
+    { description: "How can Click help you today?", imageData: [] },
+    {
+      description: "Find me some pictures of people on the street",
+      imageData: [],
+    },
+  ];
   return (
     <div>
-      <Layout data={data} inProgress={true} displaySidePanel={false} />
+      <Layout data={data} inProgress={true} displayImagesPanel={false} />
     </div>
-  )
-}
+  );
+};
 
-export default Module2
+export default Module2;

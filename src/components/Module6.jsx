@@ -60,8 +60,7 @@ const Module6 = () => {
             <p className='text-13 text-medium-gray uppercase mb-4'>iPhone 14 Pro back camera 6.86 mm f/1.78</p>
 
             <p className='text-10 text-medium-gray mb-2'>CAMERA SETTINGS</p>
-              <p className='text-13 text-white mb-4'>30 FPS</p>
-
+            <p className='text-13 text-white mb-4'>30 FPS</p>
               
             <p className='text-10 text-medium-gray mb-2'>VIDEO SETTINGS</p>
             <p className='text-13 text-white'>0:07 S・MOV・3024x4032・21.7 MB</p>

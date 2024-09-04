@@ -10,13 +10,12 @@ const ImagesPanel = ({data}) => {
           <img src='./icons/cross_icon.png' className='h-6'></img>
         </div>
 
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap h-full'>
           {data[2].imageData[0].map((element, index)=> {
             if (index < 4) {
-              return (<div key={index} className='w-1/2 h-1/2 border-medium-gray'>
+              return (<div key={index} className='w-1/2 h-1/2 border-4 border-green-500'>
                 <div className='h-3/4 border'>
                   <img src={element.imagePath} alt="" />
-  
                 </div>
                 <div className='text-10 p-2'>
                   <p className='text-white'>{element.time}</p>
