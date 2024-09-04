@@ -7,7 +7,7 @@ const Module6 = () => {
   return (
     <div className='flex bg-black h-fit min-h-screen'>
       <div className='w-3/4'>
-        <div className='fixed w-3/4'><Header /></div>
+        <div className='fixed w-3/4 z-10'><Header /></div>
         <div className='flex justify-center items-center h-full'>
           <div className='w-1/2 relative'>
           <img src='./icons/click_logo_textless.png' className='absolute top-2 right-2 w-5 h-5'></img>

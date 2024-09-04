@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center p-4 w-full border'>
+    <div className='flex justify-between items-center p-4 w-full bg-black'>
       <img src='./icons/click_logo.png' className='h-8'></img>
 
       {/* right side */}
