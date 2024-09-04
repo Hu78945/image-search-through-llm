@@ -47,7 +47,7 @@ const Module3 = () => {
   ];
   
   return (
-    <div className="flex">
+    <div className="flex border-4 border-green-900">
       <Layout data={data} />
       <ImagesPanel data={data} />
     </div>

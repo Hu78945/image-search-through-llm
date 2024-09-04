@@ -13,10 +13,10 @@ const Module2 = () => {
       imageData: [], 
     },
   ];
-  
+
   return (
     <div>
-      <Layout data={data} inProgress={true} />
+      <Layout data={data} inProgress={true} width='w-1/2' />
     </div>
   );
 };

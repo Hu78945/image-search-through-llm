@@ -3,13 +3,13 @@ import Header from "./Header";
 import Question from "./Question";
 import Answer from "./Answer";
 
-const Layout = ({ data, inProgress = false, displayImagesPanel = true }) => {
+const Layout = ({ data, inProgress = false, displayImagesPanel = true, width }) => {
   console.log('data:', data);
   
   return (
     <div className="bg-black h-screen flex flex-col items-center w-full">
       <Header />
-      <div className='p-2 flex flex-col justify-between w-1/2 h-full'>
+      <div className={`p-2 flex flex-col justify-between ${width ? width : 'w-full'} h-full`}>
         <div className='flex flex-col gap-6'>
           {data.map((item, index) => {
             console.log('item:', item);
@@ -37,7 +37,7 @@ const Layout = ({ data, inProgress = false, displayImagesPanel = true }) => {
         </div>
 
         <div className='w-full relative'>
-          <input className='w-full rounded-sm p-3 placeholder-light-gray' placeholder='Message Click'></input>
+          <input className='w-full rounded-sm p-3 placeholder-light-gray' placeholder={data.length>3 ? 'Reply to Click' : 'Message Click'}></input>
           <div className='bg-yellow h-8 w-8 absolute right-2 top-2 rounded-sm p-2'>
             <img src='./icons/arrow_upwards.png'></img>
           </div>
