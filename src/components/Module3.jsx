@@ -25,11 +25,7 @@ const Module3 = () => {
         time: "Monday・September 26, 2023・14:45",
         source: "Via Farini, Bologna, Italy",
       },
-      {
-        imagePath: "./icons/module_3e.png",
-        time: "Monday・September 26, 2023・14:45",
-        source: "Via Farini, Bologna, Italy",
-      },
+       
     ],
     "+24",
   ];
@@ -47,9 +43,16 @@ const Module3 = () => {
   ];
   
   return (
-    <div className="flex">
-      <Layout data={data} />
-      <ImagesPanel data={data} />
+    <div className="flex w-full">
+      {/* Layout component takes 55% of the width */}
+      <div className="w-[55%]">
+        <Layout data={data} />
+      </div>
+      
+      {/* ImagesPanel component takes 45% of the width */}
+      <div className="w-[45%]">
+        <ImagesPanel data={data} />
+      </div>
     </div>
   );
 };

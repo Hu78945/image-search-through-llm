@@ -37,8 +37,27 @@ const Layout = ({ data, inProgress = false, displayImagesPanel = true, width }) 
         </div>
 
         <div className='w-full relative'>
-          <input className='w-full rounded-sm p-3 placeholder-light-gray' placeholder={data.length>3 ? 'Reply to Click' : 'Message Click'}></input>
-          <div className='bg-yellow h-8 w-8 absolute right-2 top-2 rounded-sm p-2'>
+          <input className='w-full rounded-sm p-3 placeholder-light-gray
+          text-[12px]
+          sm:text-[16px]
+          md:text-[18px]
+          lg:text-[20px]
+          xl:text-[24px]
+          2xl:text-[28px]
+          ' placeholder={data.length>3 ? 'Reply to Click' : 'Message Click'}></input>
+          <div className='bg-yellow 
+          h-7 w-7
+          sm:h-8  
+          sm:w-8
+          md:h-9  
+          md:w-9
+          lg:h-10  
+          lg:w-10
+          xl:h-12  
+          xl:w-12
+          2xl:h-13 
+          2xl:w-13
+          absolute right-2 top-2 rounded-sm p-2'>
             <img src='./icons/arrow_upwards.png'></img>
           </div>
         </div>

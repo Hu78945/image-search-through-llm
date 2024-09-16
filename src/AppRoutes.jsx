@@ -13,11 +13,10 @@ function AppRoutes() {
       <div className="App">
         <Routes>
           <Route path="/module_1" element={<Module1 />} />
-
           <Route path="/module_2" element={<Module2 />} />
           <Route path="/module_3" element={<Module3 />} />
           <Route path="/module_4" element={<Module4 />} />
-          <Route path="/module_6" element={<Module6 />} />
+           <Route path="/module_6" element={<Module6 />} />
 
 
 
