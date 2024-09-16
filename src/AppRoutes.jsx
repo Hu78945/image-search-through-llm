@@ -12,7 +12,7 @@ function AppRoutes() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/module_1" element={<Module1 />} />
+          <Route path="/" element={<Module1 />} />
           <Route path="/module_2" element={<Module2 />} />
           <Route path="/module_3" element={<Module3 />} />
           <Route path="/module_4" element={<Module4 />} />

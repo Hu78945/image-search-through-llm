@@ -3,14 +3,14 @@
 // Create an Axios instance with default settings
 const axiosInstance = axios.create({
   // baseURL: 'http://192.168.10.114:8001/', // Replace with your API base URL/
-  baseURL: 'https://6ab3-203-128-16-122.ngrok-free.app/',
+  baseURL: 'http://192.168.10.108:8000/',
   timeout: 10000, // Request timeout (in milliseconds)
   headers: {
     'Content-Type': 'application/json',
     // You can add other default headers here if needed
   },
 });
-
+ 
 // // Optional: Add request interceptors if needed
 // axiosInstance.interceptors.request.use(
 //   (config) => {
