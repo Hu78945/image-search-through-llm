@@ -3,7 +3,7 @@
 // Create an Axios instance with default settings
 const axiosInstance = axios.create({
   // baseURL: 'http://192.168.10.114:8001/', // Replace with your API base URL/
-  baseURL: 'http://192.168.10.108:8000/',
+  baseURL: 'http://192.168.10.122:8001/',
   timeout: 10000, // Request timeout (in milliseconds)
   headers: {
     'Content-Type': 'application/json',

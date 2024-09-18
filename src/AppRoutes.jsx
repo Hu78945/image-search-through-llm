@@ -5,6 +5,8 @@ import Module3 from './components/Module3';
 import Module4 from './components/Module4';
 import Module6 from './components/Module6';
 import Module1 from './components/Module1';
+// import Test from './components/Test';
+
 
  
 function AppRoutes() {  
@@ -17,6 +19,8 @@ function AppRoutes() {
           <Route path="/module_3" element={<Module3 />} />
           <Route path="/module_4" element={<Module4 />} />
            <Route path="/module_6" element={<Module6 />} />
+           {/* <Route path="/test" element={<Test />} /> */}
+
 
 
 

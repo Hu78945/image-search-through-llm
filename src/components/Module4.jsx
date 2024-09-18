@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "./shared/Layout";
 import ImagesPanel from "./shared/ImagesPanel";
 
 const Module4 = () => {
+  const [isImagesPanelVisible, setIsImagesPanelVisible] = useState(false); // State to control the visibility of ImagesPanel
+
   const imageData1 = [
     [
       {
@@ -78,10 +80,30 @@ const Module4 = () => {
     { description: "Can you show me only the portraits?", imageData: [] },
     { description: "Sure, here are 16 portraits", imageData: imageData2 },
   ];
+
+  // Function to toggle the visibility of ImagesPanel
+  const handleImageClick = () => {
+    setIsImagesPanelVisible(true); // Show the ImagesPanel when an image is clicked
+  };
+
+  // Function to close the ImagesPanel when the cross icon is clicked
+  const handleCloseImagesPanel = () => {
+    setIsImagesPanelVisible(false); // Hide the ImagesPanel
+  };
+
   return (
-    <div className="flex">
-      <Layout data={data} />
-      <ImagesPanel data={data} />
+    <div className="flex w-full">
+      {/* Adjust width based on whether the ImagesPanel is visible */}
+      <div className={`${isImagesPanelVisible ? 'w-[55%]' : 'w-full'}`} onClick={handleImageClick}>
+        <Layout data={data} /> {/* Layout will take full width initially, then shrink */}
+      </div>
+
+      {/* Conditionally render ImagesPanel based on state */}
+      {isImagesPanelVisible && (
+        <div className="w-[45%]">
+          <ImagesPanel data={data} onClose={handleCloseImagesPanel} /> {/* Pass handleCloseImagesPanel */}
+        </div>
+      )}
     </div>
   );
 };

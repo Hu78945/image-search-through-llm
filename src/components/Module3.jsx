@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "./shared/Layout";
 import ImagesPanel from "./shared/ImagesPanel";
 import axiosInstance from '../utility/axios'; // Ensure axiosInstance is properly configured
 
 const Module3 = () => {
+  const [isImagesPanelVisible, setIsImagesPanelVisible] = useState(false); // State to control the visibility of ImagesPanel
+
   const imageData1 = [
     [
       {
@@ -56,17 +58,29 @@ const Module3 = () => {
     }
   };
 
+  // Function to toggle the visibility of ImagesPanel
+  const handleImageClick = () => {
+    setIsImagesPanelVisible(true); // Show the ImagesPanel when an image is clicked
+  };
+
+  // Function to close the ImagesPanel when the cross icon is clicked
+  const handleCloseImagesPanel = () => {
+    setIsImagesPanelVisible(false); // Hide the ImagesPanel
+  };
+
   return (
     <div className="flex w-full">
-      {/* Layout component takes 55% of the width */}
-      <div className="w-[55%]">
+      {/* Adjust width based on whether the ImagesPanel is visible */}
+      <div className={`${isImagesPanelVisible ? 'w-[55%]' : 'w-full'}`} onClick={handleImageClick}>
         <Layout data={data} onSearch={handleSearch} /> {/* Pass handleSearch as a prop */}
       </div>
-      
-      {/* ImagesPanel component takes 45% of the width */}
-      <div className="w-[45%]">
-        <ImagesPanel data={data} />
-      </div>
+
+      {/* Conditionally render ImagesPanel based on state */}
+      {isImagesPanelVisible && (
+        <div className="w-[45%]">
+          <ImagesPanel data={data} onClose={handleCloseImagesPanel} /> {/* Pass handleCloseImagesPanel */}
+        </div>
+      )}
     </div>
   );
 };

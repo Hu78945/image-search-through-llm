@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImagesPanel = ({ data }) => {
+const ImagesPanel = ({ data, onClose }) => {
   return (
     <div className='bg-black'>
       <div className='flex justify-between items-center border-b border-dark-gray h-[5vh]'>
@@ -8,7 +8,13 @@ const ImagesPanel = ({ data }) => {
           <span className='text-white'>16 IMAGES Found</span>
           <span className='text-medium-gray'>UPDATED 5 SEC AGO</span>
         </div>
-        <img src='./icons/cross_icon.png' className='h-6' alt="close icon" />
+        {/* Cross icon to close the ImagesPanel */}
+        <img
+          src='./icons/cross_icon.png'
+          className='h-6 cursor-pointer'
+          alt="close icon"
+          onClick={onClose} // Call the onClose function when clicked
+        />
       </div>
 
       <div className='flex flex-wrap h-[95vh]'>
